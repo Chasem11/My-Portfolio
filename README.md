@@ -10,7 +10,6 @@ Welcome to my personal portfolio website! This project showcases my skills, proj
 - [Environment Variables](#environment-variables)
 - [Usage](#usage)
 - [Contact](#contact)
-- [License](#license)
 
 ## Introduction
 This portfolio website is designed to give potential employers and collaborators an overview of who I am as a developer, the projects I've worked on, and the skills I bring to the table. It includes a dynamic skills section, an interactive project showcase, and a functional contact form.
