@@ -54,7 +54,7 @@ export const NavBar = () => {
                 <a href="https://github.com/Chasem11"><img src={navIcon2} alt="Github" /></a>
               </div>
               <HashLink to='#connect'>
-                <button className="vvd"><span>Let’s Connect</span></button>
+                <button className="vvd"><span>Contact Me</span></button>
               </HashLink>
               <a href="/assets/Chase_Moffat_Resume.pdf" download className="resume-link">
                 <button className="vvd"><span>Download Resume</span></button>

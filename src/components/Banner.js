@@ -55,8 +55,13 @@ export const Banner = () => {
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <span className="tagline">Welcome to my Portfolio</span>
                   <h1>{`Hi! I'm Chase Moffat. I'm a `}<span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Software Engineer", "Full Stack Developer", "Web Developer"]'><span className="wrap">{text}</span></span></h1>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  <p>I'm a software developer with experience in building full-stack applications using frameworks like Vue.js, React, and Laravel.
+                    I’ve worked on projects like real-time dashboards and scalable back-end systems, and I’m all about creating software that’s both efficient and 
+                    reliable. Feel free to explore my portfolio and see what I’ve been up to!
+                  </p>
+                  <button onClick={() => window.open('https://www.linkedin.com/in/chase-moffat', '_blank')}>
+                    Let’s Connect <ArrowRightCircle size={25} />
+                  </button>
                 </div>}
             </TrackVisibility>
           </Col>

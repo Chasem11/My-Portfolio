@@ -1,6 +1,4 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import '../styles/Skills.css';
@@ -26,37 +24,47 @@ export const Skills = () => {
     }
   };
 
+  const skills = [
+    { name: "JavaScript", proficiency: 90 },
+    { name: "PHP & Laravel", proficiency: 95 },
+    { name: "React.js & Vue.js", proficiency: 90 },
+    { name: "Python", proficiency: 90 },
+    { name: "MySQL", proficiency: 90 },
+    { name: "MongoDB", proficiency: 80 },
+    { name: "Node.js", proficiency: 85 },
+    { name: "C# & .NET", proficiency: 80 },
+  ];
+
   return (
     <section className="skill" id="skills">
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <div className="skill-bx wow zoomIn">
-                        <h2>Skills</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div className="item">
-                                <img src={meter1} alt="" />
-                                <h5>JavaScript</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="" />
-                                <h5>PHP & Laravel</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter3} alt="" />
-                                <h5>React.js & Vue.js</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter1} alt="" />
-                                <h5>Python</h5>
-                            </div>
-                        </Carousel>
-                    </div>
-                </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="skill-bx wow zoomIn">
+              <h2>Skills</h2>
+              <p>I’m skilled in full-stack development, working with technologies like Vue.js, React, and Laravel to create responsive front-end interfaces and back-end APIs.
+                I also have experience in database management, version control with Git, and using Docker for efficient deployments.</p>
+              <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+                {skills.map((skill, index) => (
+                  <div className="item" key={index}>
+                    <CircularProgressbar
+                      value={skill.proficiency}
+                      text={`${skill.proficiency}%`}
+                      styles={buildStyles({
+                        textColor: "#fff",
+                        pathColor: "#AA367C",
+                        trailColor: "#ddd"
+                      })}
+                    />
+                    <h5>{skill.name}</h5>
+                  </div>
+                ))}
+              </Carousel>
             </div>
+          </div>
         </div>
-        <img className="background-image-left" src={colorSharp} alt="" />
+      </div>
+      <img className="background-image-left" src={colorSharp} alt="" />
     </section>
-  )
-}
+  );
+};
