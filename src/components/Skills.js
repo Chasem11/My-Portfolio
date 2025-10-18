@@ -25,13 +25,14 @@ export const Skills = () => {
   };
 
   const skills = [
-    { name: "JavaScript", proficiency: 90 },
-    { name: "PHP & Laravel", proficiency: 95 },
-    { name: "React.js & Vue.js", proficiency: 90 },
-    { name: "Python", proficiency: 90 },
-    { name: "MySQL", proficiency: 90 },
+    { name: "JavaScript & TypeScript", proficiency: 100 },
+    { name: "PHP & Laravel", proficiency: 100 },
+    { name: "React.js & Vue.js", proficiency: 100 },
+    { name: "Nest.js & Nest.js", proficiency: 100},
+    { name: "Python", proficiency: 100 },
+    { name: "SQL", proficiency: 90 },
     { name: "MongoDB", proficiency: 80 },
-    { name: "Node.js", proficiency: 85 },
+    { name: "Node.js", proficiency: 100 },
     { name: "C# & .NET", proficiency: 80 },
   ];
 
@@ -42,8 +43,8 @@ export const Skills = () => {
           <div className="col-12">
             <div className="skill-bx wow zoomIn">
               <h2>Skills</h2>
-              <p>I’m skilled in full-stack development, working with technologies like Vue.js, React, and Laravel to create responsive front-end interfaces and back-end APIs.
-                I also have experience in database management, version control with Git, and using Docker for efficient deployments.</p>
+              <p>I’m skilled in full-stack development, working with technologies like Vue.js, React, Next.js, Nest.js, Django, and Laravel to create responsive front-end interfaces and back-end APIs.
+                I also have experience in database management, version control with Git, and using AWS and Docker for efficient deployments.</p>
               <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                 {skills.map((skill, index) => (
                   <div className="item" key={index}>
